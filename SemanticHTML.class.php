@@ -22,6 +22,7 @@ class SemanticHTMLParser {
            'parseDfn' => 'dfn',
            'parseKbd' => 'kbd',
            'parseSamp' => 'samp',
+           'parseTime' => 'time',
            'parseVar' => 'var',
         );
 
@@ -40,6 +41,9 @@ class SemanticHTMLParser {
     }
     public static function parseSamp($text, $attributes, $parser) {
         return SemanticHTMLParser::parseElement('samp', $text, $attributes, $parser);
+    }
+    public static function parseTime($text, $attributes, $parser) {
+        return SemanticHTMLParser::parseElement('time', $text, $attributes, $parser);
     }
     public static function parseVar($text, $attributes, $parser) {
         return SemanticHTMLParser::parseElement('var', $text, $attributes, $parser);
