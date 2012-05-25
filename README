@@ -8,6 +8,7 @@ This extension adds support for:
 
   * abbr
   * acronym
+  * data
   * dfn
   * kbd
   * samp
