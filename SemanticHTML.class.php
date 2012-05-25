@@ -19,6 +19,7 @@ class SemanticHTMLParser {
     private static $elements = array(
            'parseAbbr' => 'abbr',
            'parseAcronym' => 'acronym',
+           'parseData' => 'data',
            'parseDfn' => 'dfn',
            'parseKbd' => 'kbd',
            'parseSamp' => 'samp',
@@ -32,6 +33,9 @@ class SemanticHTMLParser {
     }
     public static function parseAcronym($text, $attributes, $parser) {
         return SemanticHTMLParser::parseElement('acronym', $text, $attributes, $parser);
+    }
+    public static function parseData($text, $attributes, $parser) {
+        return SemanticHTMLParser::parseElement('data', $text, $attributes, $parser);
     }
     public static function parseDfn($text, $attributes, $parser) {
         return SemanticHTMLParser::parseElement('dfn', $text, $attributes, $parser);
